@@ -55,11 +55,20 @@ button {
   border-style: solid;
 }
 
+.inputs,
 .results {
   align-self: flex-start;
   margin-left: 20px;
   white-space: pre;
   cursor: default;
+}
+
+.inputs {
+  margin-bottom: 0;
+}
+
+.bill {
+  margin-left: 60px;
 }
 
 .total {

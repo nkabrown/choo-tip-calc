@@ -11,15 +11,14 @@ const app = choo({
 
 // formula: tip total = (tip amount / 100) * bill amount
 app.model({
-  state: { tip: '   ', total: '   ' },
+  state: { percent: '   ', amount: '   ', tip: '   ', total: '   ' },
   reducers: {
     calculateTip: (data, state) => {
-      data.percent = +data.percent;
       data.amount = +data.amount;
-      return { tip: tipFormula(data).toFixed(2), total: (tipFormula(data) + data.amount).toFixed(2)  }
+      return { percent: data.percent + '%', amount: data.amount.toFixed(2), tip: tipFormula(data).toFixed(2), total: (tipFormula(data) + data.amount).toFixed(2)  }
 
       function tipFormula(data) {
-        return ((data.percent / 100) * data.amount);
+        return ((+data.percent / 100) * data.amount);
       }
     } 
   }
@@ -41,6 +40,7 @@ const view = (state, prev, send) => {
           <input type="text" placeholder="Input" id="amount">
           <button form="tip" type="submit">Calculate Tip</button>
         </form>
+        <p class="inputs">Tip rate: ${state.percent} <span class="bill">Bill: $ ${state.amount}</span></p>
         <p class="results">Tip: $ ${state.tip} <span class="total">Total: $ ${state.total}</span></p>
       </div>
     </main>`
