@@ -44,6 +44,7 @@ button[type="submit"] {
   background-color: #1486cf;
   color: #fff;
   font-size: 11.5pt;
+  cursor: pointer;
 }
 
 button {
@@ -58,6 +59,7 @@ button {
   align-self: flex-start;
   margin-left: 20px;
   white-space: pre;
+  cursor: default;
 }
 
 .total {
