@@ -11,7 +11,7 @@ const app = choo({
 
 // formula: tip total = (tip amount / 100) * bill amount
 app.model({
-  state: { tip: '   ', total: '  ' },
+  state: { tip: '   ', total: '   ' },
   reducers: {
     calculateTip: (data, state) => {
       data.percent = +data.percent;
@@ -26,8 +26,10 @@ app.model({
 const view = (state, prev, send) => {
   return html`
     <div>
-      <form id="tip" onsubmit=${(e) => {
+      <form id="tip" autocomplete="off" onsubmit=${(e) => {
         send('calculateTip', { percent: e.target.children[0].value, amount: e.target.children[1].value });
+        e.target.children[0].value = '';
+        e.target.children[1].value = '';
         e.preventDefault();
       }}>
         <input type="text" placeholder="Tip percentage" id="percent">
