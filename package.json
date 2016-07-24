@@ -1,0 +1,18 @@
+{
+  "name": "tip-calc",
+  "version": "0.0.1",
+  "description": "tip calculator in choo",
+  "main": "tip.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathan Brown <nkabrown@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "choo": "^3.1.2"
+  },
+  "devDependencies": {
+    "choo-log": "^1.4.0",
+    "tape": "^4.6.0"
+  }
+}
