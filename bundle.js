@@ -3914,9 +3914,11 @@ app.model({
     calculateTip: (data, state) => {
       data.percent = +data.percent;
       data.amount = +data.amount;
-      const tipTotal = Math.floor((data.percent / 100) * data.amount);
-      const totalAmount = data.amount + tipTotal;
-      return { tip: tipTotal, total: totalAmount  }
+      return { tip: tipFormula(data).toFixed(2), total: (tipFormula(data) + data.amount).toFixed(2)  }
+
+      function tipFormula(data) {
+        return ((data.percent / 100) * data.amount);
+      }
     } 
   }
 });
