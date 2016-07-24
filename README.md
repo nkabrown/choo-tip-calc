@@ -4,6 +4,8 @@ a small tip calculator applicaton with [choo](https://github.com/yoshuawuyts/cho
 
 my first  exploration of a brand new framework
 
+demo: http://requirebin.com/?gist=5654a45b6edf8d5645e6451f0c93d471
+
 To run the app clone the repository and install the packages:
 
 ```txt
