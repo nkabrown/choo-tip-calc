@@ -1,15 +1,65 @@
+main {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
 .tip-calculator {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 350px;
+  margin: 150px auto;
+  background-color: #f0f0f0;
+  border: 2px solid #dfdfdf;
+  border-radius: 2px;
 }
 
 #tip {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+}
+
+label {
+	margin-bottom: 4px;
+}
+
+input[type="text"] {
+  width: 300px;
+  line-height: 30px;
+  outline: none;
+  border: 2px solid #dfdfdf;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#percent,
+#amount {
+	padding-left: 10px;
+}
+
+button[type="submit"] {
+	line-height: 30px;
+  width: 125px;
+  background-color: #1486cf;
+  color: #fff;
+  font-size: 11.5pt;
+}
+
+button {
+  outline: none;
+	border-color: #1486cf;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .results {
+  align-self: flex-start;
+  margin-left: 20px;
   white-space: pre;
+}
+
+.total {
+	margin-left: 78px;
 }
