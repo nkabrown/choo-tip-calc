@@ -4,6 +4,8 @@
   "description": "tip calculator in choo",
   "main": "tip.js",
   "scripts": {
+    "start": "budo tip.js:bundle.js --live",
+    "dev": "browserify tip.js --debug | exorcist bundle.js.map > bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nathan Brown <nkabrown@gmail.com>",
@@ -12,7 +14,10 @@
     "choo": "^3.1.2"
   },
   "devDependencies": {
+    "browserify": "^13.0.1",
     "choo-log": "^1.4.0",
-    "tape": "^4.6.0"
+    "exorcist": "^0.4.0",
+    "tape": "^4.6.0",
+    "uglify-js": "^2.7.0"
   }
 }
