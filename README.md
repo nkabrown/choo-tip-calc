@@ -4,13 +4,7 @@ a small tip calculator applicaton with [choo](https://github.com/yoshuawuyts/cho
 
 my first  exploration of a brand new framework
 
-To run the app install `budo` prototyping tool with the `-g` flag:
-
-```txt
-  npm install -g budo
-```
-
-then clone the repository and install the packages:
+To run the app clone the repository and install the packages:
 
 ```txt
 git clone https://github.com/nkabrown/choo-tip-calc.git
