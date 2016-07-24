@@ -3938,8 +3938,8 @@ const view = (state, prev, send) => {
           <input type="text" placeholder="Input" id="amount">
           <button form="tip" type="submit">Calculate Tip</button>
         </form>
-        <p class="inputs">Tip rate: ${state.percent} <span class="bill">Bill: $ ${state.amount}</span></p>
-        <p class="results">Tip: $ ${state.tip} <span class="total">Total: $ ${state.total}</span></p>
+        <p class="inputs">Tip rate: ${state.percent} <span class="bill">Bill: $${state.amount}</span></p>
+        <p class="results">Tip: $${state.tip} <span class="total">Total: $${state.total}</span></p>
       </div>
     </main>`
 }
